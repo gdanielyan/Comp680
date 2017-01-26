@@ -1,0 +1,13 @@
+/* General Layout */
+body { font-family: Lato, Helvetica, Sans-serif; text-transform: uppercase ; }
+a { color: initial; font-size: 18px; } a:hover { color: teal; }
+#header, #footer, #main-content{ text-align:  center; }
+#header        { background: lightblue; }
+#nav           { background: lightsalmon; height: 100vh; }
+#main-content { background: lightgray; }
+#footer        { background: lightcoral; }
+.padding-vertical-50 { padding-top: 50px; padding-bottom: 50px; }
+.padding-horizontal-30 { padding-left: 30px; padding-right: 30px; }
+.container-full {  margin: 0 auto; width: 100%; }
+#content .col-sm-2, #content .col-sm-10 { padding-left: 0px; padding-right: 0px; }
+@media screen and (max-width: 768px) { #nav { height: initial; } }
