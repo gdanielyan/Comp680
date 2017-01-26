@@ -1,1 +1,66 @@
-<h1>Project Website</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Comp 680 Team 1</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style type="text/css" media="screen">
+        /* General Layout */
+        body { font-family: Lato, Helvetica, Sans-serif; text-transform: uppercase}
+        #header, #footer, #main-content{ text-align:  center; }
+        #header        { background: lightblue; }
+        #nav           { background: lightsalmon; height: 100vh; }
+        #main-content { background: lightgray; }
+        #footer        { background: lightcoral; }
+        .padding-vertical-50 { padding-top: 50px; padding-bottom: 50px; }
+        .padding-horizontal-30 { padding-left: 30px; padding-right: 30px; }
+        .container-full {  margin: 0 auto; width: 100%; }
+        #content .col-sm-2, #content .col-sm-10 { padding-left: 0px; padding-right: 0px; }
+        @media screen and (max-width: 768px) {
+            #nav { height: initial; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-full">
+        <div class="">
+            <div id="content" class="">
+                <div class="col-sm-2 col-xs-12">
+                    <nav id="nav" class="padding-vertical-50 padding-horizontal-30">
+                        <h2>Nav</h2>
+                        <ul class="list-unstyled">
+                            <li>List item 1</li>
+                            <li>List item 2</li>
+                            <li>List item 3</li>
+                            <li>List item 4</li>
+                            <li>List item 5</li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="spacer"></div>
+                <div class="col-sm-10 col-xs-12">
+                    <header id="header" class="padding-vertical-50">
+                        <div>
+                            <h2>Comp 680 - Team 1</h2>
+                            <h4>Keith Johnson | John Pinson | Georgiy Danielyan</h4>
+                     </div>
+                    </header>
+                    <div id="main-content" class="padding-vertical-50 padding-horizontal-30">
+                        <h2>Content</h2>
+                    </div>
+                    <footer id="footer" class="padding-vertical-50">
+                        <div>
+                            <h2>Footer</h2>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
