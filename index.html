@@ -7,7 +7,7 @@
     <title>Comp 680 Team 1</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://gdanielyan.github.io/Comp680/styles.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="https://gdanielyan.github.io/Comp680/styles.css" /> -->
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
         <div class="row">
 
             <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
-                <div class="sidebar padding-vertical-50 padding-horizontal-30">
+                <div class="sidebar">
 
                     <div class="about">
                         <h1><b>Team 1</b></h1>
@@ -24,28 +24,23 @@
                         <h4> | Georgiy Danielyan</h4> <a href="mailto:georgiy.danelyan.636@my.csun.edu">georgiy.danielyan.636@my.csun.edu</a>
                     </div>
                     
-                    <div class="seminar">
+                    <div class="seminar" id="seminar">
                         <h3 class="nav-subtitle">Seminar Work</h3>
                         <nav class="nav">
                             <ul class="list-unstyled">
-                                <li class="latest"><a href="#">List item </a></li>
-                                <li><a href="#">List item </a></li>
-                                <li><a href="#">List item </a></li>
-                                <li><a href="#">List item </a></li>
-                                <li><a href="#">List item </a></li>
+                                <li><a href="https://docs.google.com/a/my.csun.edu/document/d/1f2sN5xNnaayK4V4fnL4ibX-WJ5Lm5-UUsUvRcXIhJmA/pub?embedded=true">Seminar Proposal</a></li>
+                                <li><a href="https://docs.google.com/a/my.csun.edu/presentation/d/1Hv9GIP8x79vyGJKL3LWa00mNUWiGJQMS4_U60SX3rt8/embed?start=false&loop=false&delayms=3000"">Seminar Presentation 1 </a></li>
+                                <li><a href="https://docs.google.com/a/my.csun.edu/presentation/d/1kqQ9DpwYS4U5NQbw874QtK7RoGbTs_PnHqK6I27o4sM/embed?start=false&loop=false&delayms=3000">Seminar Presentation 2 </a></li>
                             </ul>
                         </nav> 
                     </div>
 
-                    <div class="project">
+                    <div class="project" id="project">
                         <h3 class="nav-subtitle">Project Work</h3>
                         <nav class="nav">
                             <ul class="list-unstyled">
-                                <li class="latest"><a href="#">List item </a></li>
-                                <li><a href="#">List item </a></li>
-                                <li><a href="#">List item </a></li>
-                                <li><a href="#">List item </a></li>
-                                <li><a href="#">List item </a></li>
+                                <li class=""><a href="https://docs.google.com/a/my.csun.edu/document/d/1h_KfrAmB1nBKROuKPe0B5nW_NKPr7iqdHkLQRgDInLA/pub?embedded=true">Project Proposal</a></li>
+                                <li><a href="https://docs.google.com/a/my.csun.edu/spreadsheets/d/1DVpYdVm2WndAuzki_fO51o5k5pdSc2JMfXwLZLwDNNQ/pubhtml?widget=true&amp;headers=false">Progress Report - Week 1 (Jan 30 - Feb 3) </a></li>
                             </ul>
                         </nav> 
                     </div>
@@ -54,18 +49,37 @@
             </div>
 
             <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
-                <div class="content padding-vertical-50 padding-horizontal-30">
-                    <div class="">
-                        <h3>Content</h3>
-                    </div>
+                <div class="content">
+                    <h1>Content</h1>
+                    <iframe src="https://docs.google.com/a/my.csun.edu/document/d/1h_KfrAmB1nBKROuKPe0B5nW_NKPr7iqdHkLQRgDInLA/pub?embedded=true" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
                 </div>
             </div>
 
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $anchors = $('.seminar a, .project a');
+        $anchors.each( function(element) {
+            $(this).on('click', function(event){
+                event.preventDefault();
+                var url = this.getAttribute('href');
+                $('iframe').attr("src", url);
+            });
+        });
+
+        function getContent (url) {
+            $.get(url).done(function(data){
+                console.log(data);
+            });
+        };
+
+        function loadContent( ) {
+
+        };
+    </script>
     <script>
         $(function() {
           $('a[href*="#"]:not([href="#"])').click(function() {
