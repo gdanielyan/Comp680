@@ -20,12 +20,13 @@ body {
 .sidebar h4 {
     margin-left: 10px;
 }
-.sidebar h4::after {
+.sidebar h4::after {    
     content: " -";
 }
 .content { 
     background: #e7e7e7;
     position: relative;
+    width: 1200px;
     height: 100vh;
     padding: 15px;
 }
